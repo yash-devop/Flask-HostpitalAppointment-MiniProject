@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+::selection {
+  background: #fffaf6;
+  color: black;
+  text-shadow: none;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+li, a,button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2px 2%;
+    background-color: #fffaf6;
+    /* border-style: solid; */
+
+}
+
+.logo{
+    cursor:pointer;
+    margin-top: 2.5%;
+    margin-right: auto;
+}
+
+
+
+nav{
+  background-color: #fffaf6;
+  margin-top: 2.8%;
+
+}
+
+nav ul{
+  float: left;
+}
+
+nav ul li{
+  float: left;
+  list-style: none;
+  position: relative;
+  background-color: #fffaf6;
+}
+
+nav ul li a{
+  display: block;
+  padding: 30px;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #fffaf6;
+  padding: 10px;
+}
+
+nav ul li:hover ul {
+  display: block;
+
+}
+
+nav ul li ul li {
+  width: 180px;
+}
+
+nav ul li ul li a {
+  padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {
+  background-color: #fffaf6;
+}
+/* Signup button */
+#signup{
+  margin-top: 25%;
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #C53F3F;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor:pointer;
+  transition: all 0.5s ease 0s;
+}
+#signup:hover{
+  background-color: white;
+    color: #C53F3F;
+    box-shadow:0.05rem .025rem 0 rgba(12, 12, 12, 0.5);
+}
+
+
+/* book button */
+#btn{
+   display: block;
+    width: 85%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    background-color: #DDEAF8;
+    transition: all 0.2s ease-in;
+    border-radius: 4rem;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    margin-left: 1.5rem;
+}
+#btn:hover{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 2.5px solid black;
+  /* transform: translateY(-0.5%); */
+  /* box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.5); */
+}
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: #150590;
+}
+
+/* BUTTON CSS OF REGISTER */
+.forform input[type=submit]{
+display: block;
+width: 30%;
+padding: 1.5rem;
+font-size: 2rem;
+text-align: center;
+color: white;
+background-color: black;
+border: 2.5px solid white;
+transition: 0.2s;
+cursor: pointer;
+letter-spacing: 0.1rem;
+margin-left: 30rem;
+}
+
+.forform input[type=submit]:hover{
+background-color:white;
+color: black;
+transform: translateY(-0.5%);
+box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* button{
+    margin-top: 25%;
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: all 0.5s ease 0s;
+}
+button:hover{
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    box-shadow:0.05rem .025rem 0 rgba(12, 12, 12, 0.5);
+} */
+/* #new{
+    display: block;
+    width: 85%;
+    padding: 1.5rem;
+    margin-left: 7%;
+    font-size: 2rem;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border: 2.5px solid rgb(14, 14, 14);
+    border-color: rgb(2, 2, 2);
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+#new:hover,#new:active{
+    background-color: black;
+    color: white;
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.5);
+}
+#hey input[type=submit] {
+    display: block;
+    width: 85%;
+    padding: 1.5rem;
+    margin-left: 7%;
+    font-size: 2rem;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border: 2.5px solid rgb(14, 14, 14);
+    border-color: rgb(2, 2, 2);
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    border-radius: 100px;
+}
+ #hey input[type=submit] span {
+    margin-left: 1rem;
+    transition: 0.2s;
+}
+ #hey input[type=submit]:hover,
+#hey input[type=submit]:active {
+    background-color: black;
+    color: white;
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.5);
+}
+ #hey input[type=submit]:hover span,
+#hey input[type=submit]:active span {
+    margin-left: 1.5rem;
+}  */
+/* .card-content button{
+    display: block;
+    width: 85%;
+    padding: 1.5rem;
+    margin-left: 7%;
+    font-size: 2rem;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border: 2.5px solid rgb(14, 14, 14);
+    border-color: rgb(2, 2, 2);
+    transition: 0.2s;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+} */
+
+
+
+.grid {
+    display: grid;
+    width: 20em;
+    grid-gap: 13rem;
+    grid-template-columns: repeat(3, minmax(30rem, 1fr));
+    align-items: start;
+    padding-top:100px;
+    padding-left: 100px;
+
+}
+
+.grid-item {
+    width: 35em;
+    background-color: #fff;
+    /* border-radius: 2rem; */
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    border: 4px solid #d3dfec;
+    transition: 0.2s;
+}
+/* .grid:hover > .grid-item:not(:hover) {
+  filter: blur(4px);
+} */
+/* .grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+} */
+
+.card-img {
+    display: block;
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #DDEAF8;
+}
+
+.card-header {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #0d0d0d;
+    margin-bottom: 1.5rem;
+}
+
+.card-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7;
+    color: #3d3d3d;
+    margin-bottom: 2.5rem;
+}
+
+
+body{
+  background-color: #fffaf6; /*#C0C0F2 #f4cad7*/
+}
+
+
+  @media only screen and (max-width: 60em) {
+    body {
+      padding: 3rem;
+    }
+
+    .grid {
+      grid-gap: 3rem;
+    }
+  }
+
+  /* Footer Section */
+
+  .container{
+  	max-width: 1170px;
+  	margin:auto;
+  }
+  .row{
+  	display: flex;
+  	flex-wrap: wrap;
+  }
+  .footer .container .row .footer-col ul{
+  	list-style: none;
+  }
+  .footer{
+  	  background-color: #24262b;
+      font-family: "Montserrat", sans-serif;
+      margin-top: 50px;
+      padding: 50px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+   }
+   .footer-col h4{
+   	font-size: 18px;
+   	color: #ffffff;
+   	margin-bottom: 35px;
+   	font-weight: 500;
+   	position: relative;
+   }
+   .footer-col h4::before{
+   	content: '';
+   	position: absolute;
+   	left:0;
+   	bottom: -10px;
+   	background-color: #e91e63;
+   	height: 2px;
+   	box-sizing: border-box;
+   	width: 50px;
+   }
+  .footer-col ul li:not(:last-child){
+  	margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+  	font-size: 16px;
+  	color: #ffffff;
+  	text-decoration: none;
+  	font-weight: 300;
+  	color: #bbbbbb;
+  	display: block;
+  	transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+  	color: #ffffff;
+  	padding-left: 8px;
+  }
+  .footer-col .social-links a{
+  	display: inline-block;
+  	height: 40px;
+  	width: 40px;
+  	background-color: rgba(255,255,255,0.2);
+  	margin:0 10px 10px 0;
+  	text-align: center;
+  	line-height: 40px;
+  	border-radius: 50%;
+  	color: #ffffff;
+  	transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+  	color: #24262b;
+  	background-color: #ffffff;
+  }
+
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+
+
+
+.modal{
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: rgba(184, 163, 163, 0.7); */
+  backdrop-filter: blur(20px);
+  transition: all 0.4s;
+  visibility: hidden;
+  opacity: 0;
+}
+.modal:target{
+  visibility: visible;
+  opacity: 1;
+}
+/* .modal#blur.active{
+  filter: blur(20px);
+} */
+.modalcontent{
+  position: relative;
+  background: rgb(12, 12, 12);
+  width: 60%;
+  max-width: 90%;
+  padding: 1em 2em;
+  border-radius:4px;
+  color: white;
+}
+.modalcontent body{
+  margin: 0;
+  height: 0%;
+  overflow: hidden
+}
+.modalcontent h1{
+  display: flex;
+  justify-content:center;
+  padding-top: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+.modalcontent h2{
+  display: flex;
+  justify-content:center;
+  padding-top: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+.modalcontent ol{
+  text-align: center;
+}
+.modalcontent ol li{
+  color: white;
+  text-align: center;
+  list-style-position:inside;
+}
+
+.modalcontent a{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+}
+.modalcontent img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 162px;
+  height: 5%;
+  border-radius: 50%;
+}
+.modalcontent i span{
+  vertical-align: middle;
+  margin-left: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+}
+#blur p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+}
+.modalclose{
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 100em;
+}
+.modalclose:hover{
+  color: red;
+  transition:all 0.5s ease-in-out;
+}

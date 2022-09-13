@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="book.css"> -->
+  <link href="{{ url_for('static', filename='styles/book.css') }}" rel="stylesheet" type="text/css">
+  <!-- <link href="{{ url_for('static', filename='styles/form.css') }}" rel="stylesheet" type="text/css" > -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- <link rel="stylesheet" href="index.html"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="{{ url_for('static', filename='images/HEALTPLUS⁺.png') }}" height="75">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a>
+          <ul>
+            <li><a href="#ForCovid">Covid Test</a></li>
+            <li><a href="#Appointment">Appointment</a></li>
+          </ul>
+        </li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Feedback">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="#"><button id="signup">Sign Up</button></a>
+  </header>
+  <!-- Card -->
+
+  <div id="modalbox" class="modal">
+    <div class="modalcontent" id="blur">
+      <img src="{{ url_for('static', filename='images/Contact-Icon.png') }}" alt="">
+      <h1>Dr. Monica Jacob</h1>
+      <i class="fa fa-check-circle" style=" font-size:28px;color:green;margin-left:25%">
+        <span class="text">Medical Registration Verified</span>
+      </i>
+      <h2>Pathologist</h2>
+      <h2>25 Years Experience Overall</h2>
+      <h2>MBBS, MD - Pathology
+        General Physician, Pathologist</h2>
+      <p>&nbsp;</p>
+      <ol style="color: white;">
+        <li>She has done her M.B.B.S from J.J Group of Hospitals</li>
+        <li>M.D. from TNMC , Nair Medical College (Mumbai)</li>
+        <li>DPB from C.P.S in 2002, Diploma in Aesthetic Dermatology (American Academy of Aesthetic Medicines)</li>
+      </ol>
+      <p>&nbsp;</p>
+      <form method="get" action="/appointment" class="forform">
+        <input type="submit" value="Register" name="register" />
+      </form>
+      <a href="#" class="modalclose">&times;</a>
+    </div>
+  </div>
+  <div id="modalbox2" class="modal">
+    <div class="modalcontent" id="blur">
+      <img src="{{ url_for('static', filename='images/Contact-Icon.png') }}" alt="">
+      <h1>Dr. Honey Mishra </h1>
+      <i class="fa fa-check-circle" style=" font-size:28px;color:green;margin-left:25%">
+        <span class="text">Medical Registration Verified</span>
+      </i>
+      <h2>Gynecologist</h2>
+      <h2>10 Years Experience Overall</h2>
+      <h2>MBBS, DNB - Obstetrics & Gynecology, DGO</h2>
+      <p>&nbsp;</p>
+      <ol style="color: white;">
+        <li>She completed MBBS from Shri Vasant Rao Naik Govt. Medical College, Yavatmal in 2012</li>
+        <li>India in 2017 and Fellowship in Minimal Access Surgery from The Association of Minimal Access Surgeons of India in 2020.</li>
+        <li>Some of the services provided by the doctor are: Laparoscopic Gynaecology,Doppler Scan In Pregnancy and Complicated Pregnancy Treatment etc.</li>
+      </ol>
+      <p>&nbsp;</p>
+      <form method="get" action="/appointment" class="forform">
+        <input type="submit" value=" Register" name="register" />
+      </form>
+      <a href="#" class="modalclose">&times;</a>
+    </div>
+  </div>
+  <div id="modalbox3" class="modal">
+    <div class="modalcontent" id="blur">
+      <img src="{{ url_for('static', filename='images/Contact-Icon.png') }}" alt="">
+      <h1>Dr. Jatin Ashar </h1>
+      <i class="fa fa-check-circle" style=" font-size:28px;color:green;margin-left:25%">
+        <span class="text">Medical Registration Verified</span>
+      </i>
+      <h2>Ophthalmologist</h2>
+      <h2>13 Years  Experience  Overall</h2>
+      <h2>MBBS, MD - Ophthalmology, DNB - Ophthalmology,Eye Surgeon</h2>
+      <p>&nbsp;</p>
+      <ol style="color: white;">
+        <li>Dr. Ashar is an excellent cornea surgeon and has performed cornea transplants that include transplants even in babies as young as 1 month old.</li>
+        <li>He has performed numerous Deep Anterior Lamellar Keratoplasties, Automated Anterior Lamellar Keratoplasty etc.</li>
+        <li> He has gifted sight to many who could not see due to corneal pathologies by performing corneal transplantation.</li>
+      </ol>
+      <p>&nbsp;</p>
+      <form method="get" action="/appointment" class="forform">
+        <input type="submit" value="Register" name="register" />
+      </form>
+      <a href="#" class="modalclose">&times;</a>
+    </div>
+  </div>
+  <div id="modalbox4" class="modal">
+    <div class="modalcontent" id="blur">
+      <img src="{{ url_for('static', filename='images/Contact-Icon.png') }}" alt="">
+      <h1>Dr. Surinder Hansra  </h1>
+      <i class="fa fa-check-circle" style=" font-size:28px;color:green;margin-left:25%">
+        <span class="text">Medical Registration Verified</span>
+      </i>
+      <h2>Cardiologist, Interventional Cardiologist </h2>
+      <h2>23 Years Experience Overall</h2>
+      <h2>MBBS, MD - General Medicine, DNB - Cardiology</h2>
+      <p>&nbsp;</p>
+      <ol style="color: white;">
+        <li>Dr. Surinder Hansra is an experienced Consultant Cardiologist practicing in Kandivali East.</li>
+        <li>He is an expert in Angiography, Angioplasty (via the Wrist) and pacemaker procedures.</li>
+        <li>Dr. Hansra provides facilities of ECG, 2D Echocardiography, Ambulatory Blood Pressure Monitoring & Holter Monitoring at his clinic.</li>
+      </ol>
+      <p>&nbsp;</p>
+      <form method="get" action="/appointment" class="forform">
+        <input type="submit" value=" Register" name="register" />
+      </form>
+      <a href="#" class="modalclose">&times;</a>
+    </div>
+  </div>
+  <div id="modalbox5" class="modal">
+    <div class="modalcontent" id="blur">
+      <img src="{{ url_for('static', filename='images/Contact-Icon.png') }}" alt="">
+      <h1>Dr. Jathin Rai </h1>
+      <i class="fa fa-check-circle" style=" font-size:28px;color:green;margin-left:25%">
+        <span class="text">Medical Registration Verified</span>
+      </i>
+      <h2>Interventional Radiologist</h2>
+      <h2>15 Years Experience Overall</h2>
+      <h2>MBBS, MD - Radio Diagnosis/Radiology</h2>
+      <p>&nbsp;</p>
+      <ol style="color: white;">
+        <li>He completed MBBS from K.S. Hegde Medical Academy in 2007.</li>
+        <li>MD - Radio Diagnosis/Radiology from K.S. Hegde Medical Academy in 2011.</li>
+        <li>Fellowship in Neuro & Vascular Interventional Radiology from Kovai Medical Center & Hospital (KMCH) in 2012.</li>
+      </ol>
+      <p>&nbsp;</p>
+      <form method="get" action="/appointment" class="forform">
+        <input type="submit" value=" Register" name="register" />
+      </form>
+      <a href="#" class="modalclose">&times;</a>
+    </div>
+  </div>
+  <div id="modalbox6" class="modal">
+    <div class="modalcontent" id="blur">
+      <img src="{{ url_for('static', filename='images/Contact-Icon.png') }}" alt="">
+      <h1>Dr. Shubhashree Patil</h1>
+      <i class="fa fa-check-circle" style=" font-size:28px;color:green;margin-left:25%">
+        <span class="text">Medical Registration Verified</span>
+      </i>
+      <h2>Diabetologist, General Physician</h2>
+      <h2>17 Years Experience Overall</h2>
+      <h2>MBBS, DNB - General Medicine, Diploma in Diabetology (Mumbai University)</h2>
+      <p>&nbsp;</p>
+      <ol style="color: white;">
+        <li>Doctor has done graduation in MBBS from Government medical college, Nagpur.</li>
+        <li>Doctor also has done a certified course in Diabetology Steno Diabetes Centre from Denmark.</li>
+        <li>She has valuable experience from All India Institute Of Diabetology in S.L. Raheja Hospital, Mahim, Mumbai.</li>
+      </ol>
+      <p>&nbsp;</p>
+      <form method="get" action="/appointment" class="forform">
+        <input type="submit" value=" Register" name="register" />
+      </form>
+      <a href="#" class="modalclose">&times;</a>
+    </div>
+  </div>
+
+  <div class="grid" id="blur">
+    <div class="grid-item">
+      <div class="card">
+        <img class="card-img" src="{{ url_for('static', filename='images/Pathology.gif') }}" />
+        <div class="card-content">
+          <h1 class="card-header">Pathology</h1>
+          <p class="card-text">
+            <b>Dr. Monica Jacob</b>
+            <p style="font-size: 20px"></p>
+          </p>
+          <p>
+            &nbsp
+          </p>
+          <!-- action="/appointment" method="get" -->
+          <!-- <form onsubmit="toggle()" class="card-btn">
+               <input type="submit" value="View Profile" name="register"/>
+          </form> -->
+          <!-- <a href="#modalbox"><button id="btn" onclick="toggle()"><span>View Profile &rarr;</span></button></a> -->
+          <!-- &rarr; is Unicode arrow symbol -->
+          <a href="#modalbox"><button id="btn" onclick="toggle()">View Profile <span>&rarr;</span></button></a>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="grid-item" id="blur">
+      <div class="card">
+        <img class="card-img" src="{{ url_for('static', filename='images/Gynecology.gif') }}" />
+        <div class="card-content">
+          <h1 class="card-header">Gynaecology</h1>
+          <p class="card-text">
+            <b>Dr. Honey Mishra</b>
+            <p style="font-size: 20px"></p>
+          </p>
+          <p>
+            &nbsp
+          </p>
+          <!-- <form method="get" action="/appointment" class="card-btn" id="hey">
+               <input type="submit" value="View Profile" name="register"/>
+          </form>  -->
+          <a href="#modalbox2"><button id="btn" onclick="toggle()">View Profile <span>&rarr;</span></button></a>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item" id="blur">
+      <div class="card">
+        <img class="card-img" src="{{ url_for('static', filename='images/Ophthalmologist.gif') }}" />
+        <div class="card-content">
+          <h1 class="card-header">Ophthamology</h1>
+          <p class="card-text">
+            <b>Dr. Jatin Ashar</b>
+            <p style="font-size: 20px"></p>
+          </p>
+          </p>
+          <p>
+            &nbsp
+          </p>
+          <!-- <form method="get" action="/appointment" class="card-btn">
+               <input type="submit" value="View Profile" name="register"/>
+          </form> -->
+          <a href="#modalbox3"><button id="btn" onclick="toggle()">View Profile <span>&rarr;</span></button></a>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item" id="blur">
+      <div class="card">
+        <img class="card-img" src="{{ url_for('static', filename='images/Cardiologist.gif') }}" />
+        <div class="card-content">
+          <h1 class="card-header">Cardiology</h1>
+          <p class="card-text">
+            <b>Dr. Surinder Hansra</b>
+            <p style="font-size: 20px"></p>
+          </p>
+          <p>
+            &nbsp
+          </p>
+          <!-- <form method="get" action="/appointment" class="card-btn">
+               <input type="submit" value="View Profile" name="register"/>
+          </form> -->
+          <a href="#modalbox4"><button id="btn" onclick="toggle()">View Profile <span>&rarr;</span></button></a>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item" id="blur">
+      <div class="card">
+        <img class="card-img" src="{{ url_for('static', filename='images/Radiography.gif') }}">
+        <div class="card-content">
+          <h1 class="card-header">Radiology</h1>
+          <p class="card-text">
+            <b>Dr. Jathin Rai</b>
+            <p style="font-size: 20px"></p>
+          </p>
+          <p>
+            &nbsp
+          </p>
+          <!-- <form method="get" action="/appointment" class="card-btn">
+                 <input type="submit" value="View Profile" name="register"/>
+            </form> -->
+          <a href="#modalbox5"><button id="btn" onclick="toggle()">View Profile <span>&rarr;</span></button></a>
+        </div>
+      </div>
+    </div>
+    <div class="grid-item" id="blur">
+      <div class="card">
+        <img class="card-img" src="{{ url_for('static', filename='images/Diabetologist.gif') }}">
+        <div class="card-content">
+          <h1 class="card-header">Diabetologist</h1>
+          <p class="card-text">
+            <b>Dr. Shubhashree Patil</b>
+            <p style="font-size: 20px"></p>
+          </p>
+          <p>
+            &nbsp
+          </p>
+          <!-- <form method="get" action="/appointment" class="card-btn">
+               <input type="submit" value="View Profile" name="register"/>
+          </form> -->
+          <a href="#modalbox6"><button id="btn" onclick="toggle()">View Profile <span>&rarr;</span></button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer Section  -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Affiliate Program</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Payment Options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Online</h4>
+          <ul>
+            <li><a href="#">+91-8668XXXXXX</a></li>
+            <li><a href="#">+91-9962XXXXXX</a></li>
+            <li><a href="#">For WhatsApp:</a></li>
+            <li><a href="#">+91-9328XXXXXX</a></li>
+            <li><a href="#">healthplus@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 300,
+      duration: 1000,
+    });
+  </script>
+  <script>
+    function toggle() {
+      var blur = document.getElementById('blur');
+      blur.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>

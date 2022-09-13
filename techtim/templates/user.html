@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HealthPlus+</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width", initial-scale="1">
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/jpeg">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" type="text/css" >
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+  <link rel="stylesheet" href="book.html">
+  <!-- <link rel="stylesheet" href="book.css"> -->
+  <link href="{{ url_for('static', filename='styles/book.css') }}" rel="stylesheet" type="text/css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;800&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,600;0,800;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="register.html">
+  <!-- <link rel="stylesheet" href="register.css"> -->
+  <link href="{{ url_for('static', filename='styles/register.css') }}" rel="stylesheet" type="text/css" >
+  <link rel="shortcut icon" type="image/jpg" href="C:\Users\vinun\OneDrive\Desktop\DesktopImp\BackupProject\flask\static\images\HEALTPLUS⁺sav.png"/>
+</head>
+<body style="margin-left: 20%;">
+  <h1>
+    THANK YOU FOR BOOKING AN APPOINTMENT WITH US
+    {% if value == 'Pathology' %}
+	      <h1>Your appointment has been booked with Dr.Monica Jacob</h1>
+    
+    {% else %}
+	      <h1>This does not equal 15</h1>
+    
+    {% endif %}
+  </h1>
+  <form action="/index" method="POST">
+    <button name="forwardBtn" type="submit">Back to home</button>
+  </form>
+</body>
+</html>

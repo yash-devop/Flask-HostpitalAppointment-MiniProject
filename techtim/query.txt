@@ -1,0 +1,1 @@
+create table users( Name varchar(50), Gender varchar(8), AadharNumber varchar(20), Address varchar(500), PhoneNumber integer(15), Pincode varchar(7), Fever varchar(5), LossOfSmellandTaste varchar(5), Other varchar(100), MedicalHistory varchar(200), AppointmentDate varchar(50))  

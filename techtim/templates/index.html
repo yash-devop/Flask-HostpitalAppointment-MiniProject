@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HealthPlus+</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width" , initial-scale="1">
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/jpeg">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" type="text/css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+  <link rel="stylesheet" href="book.html">
+  <!-- <link rel="stylesheet" href="book.css"> -->
+  <link href="{{ url_for('static', filename='styles/book.css') }}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;800&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,600;0,800;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="register.html">
+  <!-- <link rel="stylesheet" href="register.css"> -->
+  <link href="{{ url_for('static', filename='styles/register.css') }}" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" type="image/jpg"
+    href="C:\Users\vinun\OneDrive\Desktop\DesktopImp\BackupProject\flask\static\images\HEALTPLUS⁺sav.png" />
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="{{ url_for('static', filename='images/HEALTPLUS⁺.png') }}" height="75">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a>
+          <ul>
+            <li><a href="#ForCovid" style="background-color: #fffaf6;">Covid Test</a></li>
+            <li><a href="#Appointment" style="background-color: #fffaf6;">Appointment</a></li>
+          </ul>
+        </li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Feedback">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="#"><button>Sign Up</button></a>
+  </header>
+  <section>
+    <div id="ForCovid" class="ForCovid">
+      <img src="{{ url_for('static', filename='images/Vaccine-bro.png') }}" style="width:40%;">
+    </div>
+    <div class="content">
+      <h1>
+        <p>
+          <span>Stay </span>Safe, <span> Stay </span>Healthy.
+        </p>
+      </h1>
+      <h3>
+        <p>Showing symptoms for covid? Want to get yourself tested?</p>
+        <p>You are at the right place </p>
+        <p>
+          &nbsp
+        </p>
+        <!-- <a class="btn2" href="register.html"> -->
+        <!-- <button2>Book !</button2> -->
+        <form method="get" action="/register" class="forform">
+          <input type="submit" value="Register" name="register" />
+        </form>
+        <!-- </a> -->
+      </h3>
+    </div>
+  </section>
+  <section style="padding-top:140px">
+    <div id="Appointment" class="Appointment">
+      <img src="{{ url_for('static', filename='images/Doctor-pana.png') }}" style="width:40%;margin-top:10%">
+    </div>
+    <div class="content1">
+      <h2>
+        Looking For Appointments?
+      </h2>
+      <h4>
+        <p>Book one right now</p>
+        <p>
+          &nbsp
+        </p>
+        <!-- <a class="btn2" href="book.html"> -->
+        <!-- <button2>Book !</button2> -->
+        <form method="post" action="/book" class="forform1" style="width: 50%; margin-left: 25%">
+          <input type="submit" value="Book !" name="book" />
+        </form>
+        <!-- </a> -->
+
+      </h4>
+    </div>
+  </section>
+  <div style="background-color: #ccdfd3;height:150px">
+    <p>
+      &nbsp
+    </p>
+  </div>
+  <section>
+    <div id="About" class="About">
+    </div>
+    <div class="content2">
+      <h5>
+        Creators.
+      </h5>
+      <div class="profile-card">
+        <div class="card-header">
+          <div class="pic">
+            <img src="{{ url_for('static', filename='images/yashu_pfp.png') }}" alt="">
+          </div>
+          <div class="name">Yash Kamble</div>
+          <div class="desc">Developer</div>
+          <div class="sm">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-github"></a>
+            <a href="#" class="fab fa-instagram"></a>
+          </div>
+          <a href="#" class="contact-btn">Contact Me</a>
+        </div>
+
+
+        <div class="card-header">
+          <div class="pic">
+            <img src="{{ url_for('static', filename='images/sree_pfp.png') }}" alt="">
+          </div>
+          <div class="name">Sreejit Nair</div>
+          <div class="desc">Developer</div>
+          <div class="sm">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-github"></a>
+            <a href="#" class="fab fa-instagram"></a>
+          </div>
+          <a href="#" class="contact-btn">Contact Me</a>
+        </div>
+
+
+        <div class="card-header">
+          <div class="pic">
+            <img src="{{ url_for('static', filename='images/Vig_pfp.png') }}">
+          </div>
+          <div class="name">Vignesh Nair</div>
+          <div class="desc">Developer</div>
+          <div class="sm">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-github"></a>
+            <a href="#" class="fab fa-instagram"></a>
+          </div>
+          <a href="#" class="contact-btn">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:200px;height:160rem">
+    <div class="container_1">
+      <div class="heading">
+        <p style="color:black">Counting <span1>Upto the Limit.</span1>
+        </p>
+        <p>
+          <sub style="font-size: 35px;color:#595959">[Covid-19 stats for <u>India</u>]</sub>
+        </p>
+      </div>
+      <div class="counter-container">
+        <div class="counter" id="recover">
+          <img src="static/images/regeneration.png" alt="timer" srcset="" class="icon">
+          <p>&nbsp</p>
+          <p data-target="41468120" class="count">0</p>
+          <p style="color:#595959; font-size:40px">Recoveries</p>
+        </div>
+        <div class="counter" id="cases">
+          <img src="static/images/hospital-bed.png" alt="Coffee" srcset="" class="icon">
+          <p>&nbsp</p>
+          <p data-target="42586544" class="count">0</p>
+          <p style="color:#595959; font-size:40px">Active Cases</p>
+        </div>
+        <div class="counter" id="deaths">
+          <img src="static/images/skull.png" alt="night" srcset="" class="icon">
+          <p>&nbsp</p>
+          <p data-target="508012" class="count">0</p>
+          <p style="color:#595959; font-size:40px">Total Deaths</p>
+        </div>
+
+        <div class="heading">>
+          <p>
+            <sub style="font-size: 35px;color:#595959">[Covid-19 stats for <u>World</u>]</sub>
+          </p>
+        </div>
+        <section style="padding-top:200px;height:160rem">
+          <div class="container_1">
+            <div class="counter-container">
+              <div class="counter" id="recover">
+                <img src="static/images/regeneration.png" alt="timer" srcset="" class="icon">
+                <p>&nbsp</p>
+                <p data-target="336763047" class="count">0</p>
+                <p style="color:#595959; font-size:40px">Recoveries</p>
+              </div>
+              <div class="counter" id="cases">
+                <img src="static/images/hospital-bed.png" alt="Coffee" srcset="" class="icon">
+                <p>&nbsp</p>
+                <p data-target="72133086" class="count">0</p>
+                <p style="color:#595959; font-size:40px">Active Cases</p>
+              </div>
+              <div class="counter" id="deaths">
+                <img src="static/images/skull.png" alt="night" srcset="" class="icon">
+                <p>&nbsp</p>
+                <p data-target="5847971" class="count">0</p>
+                <p style="color:#595959; font-size:40px">Total Deaths</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div style="background-color: #fffaf6;height: 100%">
+          <p>
+            &nbsp
+          </p>
+        </div>
+  </section>
+
+  </section>
+
+  <section style="padding-top:140px;background-color:#ccdfd3;height:70rem">
+    <div id="Feedback" class="container-1">
+      <div class="contact-box">
+        <div class="left">
+          <img src="{{ url_for('static', filename='images/Feedback.png') }}">
+        </div>
+        <div class="right">
+          <h2>Feedback.</h2>
+          <input type="text" class="field" placeholder="Your Name...">
+          <input type="text" class="field" placeholder="Your Email...">
+          <input type="text" class="field" placeholder="Phone(+91)...">
+          <textarea placeholder="Message..." class="field"></textarea>
+          <button class="btn">Send</button>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: #ccdfd3;height: 100px">
+      <p>
+        &nbsp
+      </p>
+    </div>
+  </section>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 300,
+      duration: 1000
+    });
+  </script>
+  <script>
+    const counters = document.querySelectorAll('.count');
+    const speed = 800;
+    counters.forEach(counter => {
+      const animate = () => {
+        const value = +counter.getAttribute('data-target');
+        const data = +counter.innerText;
+        const time = value / speed;
+        if (data < value) {
+          counter.innerText = Math.ceil(data + time);
+          setTimeout(animate, 1);
+        } else {
+          counter.innerText = value;
+        }
+      }
+      animate();
+    });
+
+    window.scroll({
+      top: 1000,
+      behavior: 'smooth' // 👈 
+    });
+    document.getElementById('kristen-wiig')
+      .scrollIntoView({
+        behavior: 'smooth'
+      });
+  </script>
+
+</body>
+
+</html>
+
+<!-- Footer Section  -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h10>Company</h10>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Affiliate Program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h10>Get help</h10>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Payment Options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h10>Online </h10>
+        <ul>
+          <li><a href="#">+91-8668XXXXXX</a></li>
+          <li><a href="#">+91-9962XXXXXX</a></li>
+          <li><a href="#">For WhatsApp:</a></li>
+          <li><a href="#">+91-9328XXXXXX</a></li>
+          <li><a href="#">healthplus@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h10>Follow Us</h10>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 200,
+    duration: 1000
+  });
+</script>
+</body>
+
+</html>

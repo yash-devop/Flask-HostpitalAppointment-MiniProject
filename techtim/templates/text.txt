@@ -1,0 +1,25 @@
+<section style="padding-top:140px;background-color:#ccdfd3;height:70rem">
+        <div class="container_1">
+          <div class="heading">
+              Counting Upto the Limit
+          </div>
+          &nbsp;
+          <div class="counter-container">
+              <div class="counter">
+                  <img src="../static/images/covidcount.svg" alt="timer" srcset="" class="icon">
+                  <p data-target="15000" class="count">0</p>
+                  <p>Work Hours</p>
+              </div>
+              <div class="counter">
+                  <img src="../static/images/covidcount.svg" alt="Coffee" srcset="" class="icon">
+                  <p data-target="1200" class="count">0</p>
+                  <p>Cups of Coffee</p>
+              </div>
+              <div class="counter">
+                  <img src="../static/images/covidcount.svg" alt="night" srcset="" class="icon">
+                  <p data-target="500" class="count">0</p>
+                  <p>Sleepless Nights</p>
+              </div>
+          </div>
+      </div>
+      </section>

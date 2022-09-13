@@ -1,0 +1,80 @@
+import sqlite3
+from unicodedata import name
+from flask import Flask , redirect, request, session,url_for,render_template
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+app = Flask(__name__)
+app.secret_key = "yashu"
+
+
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///flask.db'
+# conn=sqlite3.connect("G:\Python project\techtim\flask.db")
+# c=conn.cursor()
+# c.execute('insert into form values(?,?)',(e1.get(),e2.get()))
+#  Initializin the Database
+db = SQLAlchemy(app)
+
+
+
+
+
+
+
+
+
+
+
+
+#create database model
+class Flask(db.Model):
+    id = db.Column(db.Integer,primary_key = True)
+    fullname = db.Column(db.String(100), nullable = False) #nullable means u cant add blank name
+    aadhar_no = db.Column(db.String, primary_key = True, nullable = False)
+    address = db.Column(db.String(400), nullable = False)
+    pin_code = db.Column(db.Integer, nullable = False)
+    medical_history = db.Column(db.String(400))
+    date_created = db.Column(db.DateTime, default = datetime.utcnow)
+
+    def __init__(self,fullname,aadhar_no,address,pin_code,medical_history,date_created):
+        self.fullname  = fullname
+        self.aadhar_no = aadhar_no
+        self.address = address
+        self.pin_code = pin_code
+        self.medical_history = medical_history
+        self.date_created = date_created
+
+@app.route("/")
+def home():
+    title1 = "YashNotchanged"
+    return render_template("login.html",title1=title1)
+
+@app.route("/user")
+def user():
+    if "user" in session:
+        user = session["user"]
+        return f"<h1>{user}</h1>"
+    else:
+        return redirect(url_for("login"))
+
+@app.route("/login", methods=["POST","GET"])
+def login():
+    title2 = "YashChanged" 
+    if request.method == "POST":
+        user = request.form["full_name"]
+        session["user"] = user
+        return redirect(url_for("user"))
+    else:
+        if "user" in session:
+            return redirect(url_for("user"))
+        return render_template("login.html",title2=title2)
+
+
+@app.route("/logout")
+def logout():
+    session.pop("user",None)
+    return redirect(url_for("login"))
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
